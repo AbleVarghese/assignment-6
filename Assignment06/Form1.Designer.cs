@@ -85,7 +85,6 @@
             this.SalesBonusTextBox.ReadOnly = true;
             this.SalesBonusTextBox.Size = new System.Drawing.Size(132, 22);
             this.SalesBonusTextBox.TabIndex = 1;
-            this.SalesBonusTextBox.TextChanged += new System.EventHandler(this.SalesBonusTextBox_TextChanged);
             // 
             // TotalMonthlySales
             // 
@@ -103,7 +102,6 @@
             this.hoursWorkedTextBox.Name = "hoursWorkedTextBox";
             this.hoursWorkedTextBox.Size = new System.Drawing.Size(132, 22);
             this.hoursWorkedTextBox.TabIndex = 1;
-            this.hoursWorkedTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // employeeIdTextBox
             // 
@@ -238,7 +236,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Calculate";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.CalculateButton);
             // 
             // button2
             // 
@@ -249,7 +247,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Print";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.PrintButton);
             // 
             // button3
             // 
@@ -260,7 +258,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.ClearButton);
             // 
             // printPreviewDialog1
             // 
@@ -271,7 +269,6 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
-            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
             // pictureBox1
             // 

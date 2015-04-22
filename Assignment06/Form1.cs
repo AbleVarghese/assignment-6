@@ -33,52 +33,38 @@ namespace Assignment06
            
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void ClearButton(object sender, EventArgs e)
         {
-              {
-             RadioEnglish.Checked = false;
-             RadioFrench.Checked = false;
-             employeeNameTextBox.Text = ""; 
-             employeeIdTextBox.Text= "";
-             hoursWorkedTextBox.Text = "";
-             TotalMonthlySales.Text = ""; 
-             SalesBonusTextBox.Text = ""; 
-         } 
-  
+            {
+                RadioEnglish.Checked = false;
+                RadioFrench.Checked = false;
+                employeeNameTextBox.Text = "";
+                employeeIdTextBox.Text = "";
+                hoursWorkedTextBox.Text = "";
+                TotalMonthlySales.Text = "";
+                SalesBonusTextBox.Text = "";
+            } 
 
         }
 
-        private void TotalSalesLabel_Click(object sender, EventArgs e)
+        private void PrintButton(object sender, EventArgs e)
         {
-
+            printForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview;
+            printForm1.Print();
         }
 
-        private void HoursWorkedLabel_Click(object sender, EventArgs e)
+        private void CalculateButton(object sender, EventArgs e)
         {
-
-        }
-
-        private void SalesBonusTextBox_TextChanged(object sender, EventArgs e)
-        {
-          
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            double hoursWorked = Convert.ToDouble(hoursWorkedTextBox.Text);
+             double hoursWorked = Convert.ToDouble(hoursWorkedTextBox.Text);
             double percentageOfHoursWorked = hoursWorked / 160;
 
             double totalMonthlySales = Convert.ToDouble(TotalMonthlySales.Text);
             double totalBonusAmount = totalMonthlySales * 0.02;
             SalesBonusTextBox.Text = (percentageOfHoursWorked * totalBonusAmount).ToString();
+        
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            printForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview;
-            printForm1.Print();
-        }
        
     }
 }
